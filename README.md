@@ -33,7 +33,7 @@ Version 5 extends V4 (`0f0a8d2`) with subject-specific tutor applications, human
 - Clear labels distinguish seeded synthetic examples, new demo interactions, peer tutoring and faculty-organized synthetic support. Online format has no meeting integration.
 - Responsive layouts, semantic forms, keyboard-accessible controls, native booking dialogs and loading/retry/empty/error/success states.
 
-The product recognizes **support needs**, not individual academic risk. Voluntary reflection, explicit demand and two-question check results are different evidence. Deterministic support recommendations require human review. Local AI proposes educational drafts only; it does not contact students or make academic decisions. Every person and observation is fictional. `X-Demo-User-Id` is **not authentication**. Do not expose this demo publicly or enter real student information.
+The product recognizes **support needs**, not individual academic risk. Voluntary reflection, explicit demand and two-question check results are different evidence. Deterministic support recommendations require human review. Local AI proposes educational drafts only; it does not contact students or make academic decisions. Every person and observation is fictional. `X-Demo-User-Id` is **not authentication**. The source repository is provided for evaluation purposes. The application is designed for local execution only and must not be deployed publicly or used with real student information.
 
 ## Install and run
 
