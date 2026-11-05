@@ -1,5 +1,9 @@
 # ClassAll
 
+**Team:** EdSpark  
+**Project:** ClassAll  
+**Event:** Hack4Edu 2026
+
 **Learning is a shared strength.** A local, synthetic Hack4Edu 2026 connected learning ecosystem using React/TypeScript/Vite, FastAPI and SQLite.
 
 **V6 experience design** builds on merged V5: three visible learning pillars, grouped role navigation, accessible primary actions, guided applications and faculty review, a visual contribution portfolio, topic-grouped learning history and a simpler six-stage Studio. EN/ES layouts were inspected at 1440, 768 and 390px. See the [design report and screenshots](docs/V6_DESIGN_REPORT.md), [bilingual 6–7 minute demo guide](docs/V6_DEMO.md) and [QA report](docs/V6_QA_REPORT.md). The optional guided demo navigates real application screens; it does not complete actions.
@@ -33,7 +37,21 @@ The product recognizes **support needs**, not individual academic risk. Voluntar
 
 ## Install and run
 
-Requires Python 3.12+, Node.js 22.12+ and npm. Tested on Linux with Python 3.12.14 and Node 24.22.1; Windows instructions use the existing Python/Node setup and have not been executed on Windows.
+Requires the following software:
+
+| Software | Minimum version | Purpose |
+|---|---|---|
+| Python | 3.12+ | Backend and API |
+| Node.js | 22.12+ | Frontend development |
+| npm | Included with Node.js | Frontend dependencies |
+| Git | Recommended | Repository cloning and version control |
+| Modern web browser | Current version | Accessing the application |
+
+SQLite is included with Python and does not require a separate database server.
+
+Ollama is optional and is only required for live local AI generation. The documented configuration uses the `qwen3:8b` model.
+
+The backend test suite has been successfully executed on Windows (107 tests passed). Full Windows browser and local AI workflow validation remains outstanding.
 
 From the repository root:
 
@@ -66,11 +84,11 @@ The default database is `backend/data/classall.sqlite3`. Startup performs additi
 
 ### Update an existing Windows installation
 
-Stop both local servers and back up `backend/data/classall.sqlite3` while stopped. Commit/stash your own source changes, fetch, and switch to `feature/classall-v6-experience-design` (after PR merge, use the updated `main`). From the project root:
+Stop both local servers and back up backend/data/classall.sqlite3 while stopped. Commit or stash your own source changes, fetch the latest updates, and switch to the main branch. From the project root:
 
 ```powershell
 git fetch origin
-git switch feature/classall-v6-experience-design
+git switch main
 git pull --ff-only
 .venv\Scripts\Activate.ps1
 python -m pip install -r backend/requirements.lock.txt
