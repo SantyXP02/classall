@@ -122,6 +122,12 @@ def test_pdf_upload_extract_metadata_and_role_course_boundary(client):
         ("notes.pdf", "application/pdf", b"%PDF-" + b"x" * MAX_BYTES, 413),
         ("notes.exe", "application/pdf", b"%PDF-", 422),
     ],
+    ids=[
+        "archivo_txt_invalido",
+        "pdf_corrupto",
+        "pdf_excede_limite",
+        "extension_no_permitida",
+    ],
 )
 def test_invalid_and_oversized_uploads(client, filename, mime, content, status):
     r = client.post(
